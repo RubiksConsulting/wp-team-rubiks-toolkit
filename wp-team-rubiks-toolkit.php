@@ -29,7 +29,7 @@ define('WP_TEAM_RUBIKS_TOOLKIT_VERSION', '1.0.0');
 */
 function wp_team_rubiks_autoloader($class){
   $parts = explode('\\', $class);
-  if($parts[0] != 'WP_TEAM_RUBIKS'){
+  if($parts[0] != 'WP_Team_Rubiks'){
     return;
   }
   $plugin = strtolower(str_replace('_', '-', $parts[0].'-'.$parts[1]));
