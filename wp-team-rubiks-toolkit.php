@@ -41,4 +41,4 @@ function wp_team_rubiks_autoloader($class){
 	$filepath = WP_TEAM_RUBIKS_PLUGINS_PATH . '/' . $path . '/'. $file;
   require_once($filepath);
 }
-$WP_TEAM_RUBIKS = new WP_Team_Rubiks\Toolkit\Global\Setup();
+$WP_TEAM_RUBIKS = new WP_Team_Rubiks\Toolkit\Core\Setup();

@@ -1,5 +1,5 @@
 <?PHP
-namespace WP_Team_Rubiks\Toolkit\Global;
+namespace WP_Team_Rubiks\Toolkit\Core;
 
 /**
 * Setup class to initialise Toolkit
