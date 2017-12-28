@@ -39,7 +39,7 @@ function wp_team_rubiks_autoloader($class){
   array_pop($parts);
   $path = $plugin.'/'.strtolower(str_replace('_', '-', implode('/', $parts)));
 	$filepath = WP_TEAM_RUBIKS_PLUGINS_PATH . '/' . $path . '/'. $file;
-	print_r($filepath);
-  //require_once($filepath);
+  require_once($filepath);
 }
+spl_autoload_register('wp_team_rubiks_autoloader');
 $WP_TEAM_RUBIKS = new WP_Team_Rubiks\Toolkit\Core\Setup();
