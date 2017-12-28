@@ -16,11 +16,15 @@ class Helpers {
 
   static public function getModuleDir($namespace){
     $namespace = explode('\\', $namespace);
-    $plugin = strtolower(str_replace('_', '-', $namespace[0].'-'.$namespace[1]));
+    $plugin = self::namespaceToDir($namespace[0].'-'.$namespace[1]));
     $namespace[0] = 'app';
     $namespace[1] = 'modules';
-    $module = end($namespace);
+    $module = self::namespaceToDir(end($namespace));
     array_pop($namespace);
-    return $plugin . '/' . strtolower(str_replace('_', '-', implode('/', $namespace))) . '/' . $module;
+    return $plugin . '/' . self::namespaceToDir(implode('/', $namespace)) . '/' . $module;
+  }
+
+  static function namespaceToDir($part){
+    return strtolower(str_replace('_', '-', $part));
   }
 }
