@@ -7,11 +7,11 @@ namespace WP_Team_Rubiks\Toolkit\Core;
 class Helpers {
 
   static public function getModulePath($namespace){
-    WP_TEAM_RUBIKS_PLUGINS_PATH . '/' . self::getModuleDir($namespace);
+    return WP_TEAM_RUBIKS_PLUGINS_PATH . '/' . self::getModuleDir($namespace);
   }
 
   static public function getModuleURI($namespace){
-    WP_TEAM_RUBIKS_PLUGINS_URI . '/' . self::getModuleDir($namespace);
+    return WP_TEAM_RUBIKS_PLUGINS_URI . '/' . self::getModuleDir($namespace);
   }
 
   static public function getModuleDir($namespace){
