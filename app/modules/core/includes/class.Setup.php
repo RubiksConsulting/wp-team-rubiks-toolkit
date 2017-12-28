@@ -4,7 +4,7 @@ namespace WP_Team_Rubiks\Toolkit\Core;
 /**
 * Setup class to initialise Toolkit
 */
-class Setup {
+class Setup{
 
   /**
   * Class constructor
@@ -27,6 +27,7 @@ class Setup {
   * @return void
   */
   public function admin_resources(){
-    wp_enqueue_script('wp-team-rubiks-toolkit-admin', WP_TEAM_RUBIKS_PLUGINS_URI . 'wp-team-rubiks-toolkit/app/modules/global/scripts/admin.js', array(), WP_TEAM_RUBIKS_TOOLKIT_VERSION, true);
+    $this->modulePath = Helpers::getModulePath(__NAMESPACE__);
+    wp_enqueue_script('wp-team-rubiks-toolkit-admin', $this->modulePath . '/scripts/admin.js', array(), WP_TEAM_RUBIKS_TOOLKIT_VERSION, true);
   }
 }
