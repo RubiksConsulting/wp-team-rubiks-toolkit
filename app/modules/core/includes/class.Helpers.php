@@ -7,14 +7,14 @@ namespace WP_Team_Rubiks\Toolkit\Core;
 class Helpers {
 
   static public function getModulePath($namespace){
-    WP_TEAM_RUBIKS_PLUGINS_PATH . '/' .$this->getModuleDir($namespace);
+    WP_TEAM_RUBIKS_PLUGINS_PATH . '/' . self::getModuleDir($namespace);
   }
 
   static public function getModuleURI($namespace){
-    WP_TEAM_RUBIKS_PLUGINS_URI . '/' .$this->getModuleDir($namespace);
+    WP_TEAM_RUBIKS_PLUGINS_URI . '/' . self::getModuleDir($namespace);
   }
 
-  private function getModuleDir($namespace){
+  static public function getModuleDir($namespace){
     $namespace = explode('\\', $namespace);
     $plugin = strtolower(str_replace('_', '-', $namespace[0].'-'.$namespace[1]));
     $namespace[0] = 'app';
