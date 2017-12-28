@@ -27,7 +27,7 @@ class Setup{
   * @return void
   */
   public function admin_resources(){
-    $this->modulePath = Helpers::getModulePath(__NAMESPACE__);
-    wp_enqueue_script('wp-team-rubiks-toolkit-admin', $this->modulePath . '/scripts/admin.js', array(), WP_TEAM_RUBIKS_TOOLKIT_VERSION, true);
+    $moduleURI = Helpers::getModuleURI(__NAMESPACE__);
+    wp_enqueue_script('wp-team-rubiks-toolkit-admin', $moduleURI . '/scripts/admin.js', array(), WP_TEAM_RUBIKS_TOOLKIT_VERSION, true);
   }
 }
