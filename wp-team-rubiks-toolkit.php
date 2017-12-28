@@ -35,6 +35,7 @@ function wp_team_rubiks_autoloader($class){
   $plugin = strtolower(str_replace('_', '-', $parts[0].'-'.$parts[1]));
 	$parts[0] = 'app';
 	$parts[1] = 'modules';
+	
   $file = 'class.' . end($parts) . '.php';
   array_pop($parts);
   $path = $plugin.'/'.strtolower(str_replace('_', '-', implode('/', $parts)));
