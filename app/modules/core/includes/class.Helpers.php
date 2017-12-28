@@ -16,7 +16,7 @@ class Helpers {
 
   static public function getModuleDir($namespace){
     $namespace = explode('\\', $namespace);
-    $plugin = self::namespaceToDir($namespace[0].'-'.$namespace[1]));
+    $plugin = self::namespaceToDir($namespace[0].'-'.$namespace[1]);
     $namespace[0] = 'app';
     $namespace[1] = 'modules';
     $module = self::namespaceToDir(end($namespace));
