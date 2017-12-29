@@ -1,0 +1,3 @@
+[submodule "app/modules/custom-post-type/includes/wp-custom-post-type-class"]
+	path = app/modules/custom-post-type/includes/wp-custom-post-type-class
+	url = https://github.com/TeamRubiks/wp-custom-post-type-class/
