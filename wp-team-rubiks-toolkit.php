@@ -23,7 +23,7 @@ define('WP_TEAM_RUBIKS_PLUGINS_URI', plugins_url());
 define('WP_TEAM_RUBIKS_TOOLKIT_VERSION', '1.0.0');
 
 /**
-* Autoloader for classes within the \TeamRubiks namespace
+* Autoloader for classes within the \WP_Team_Rubiks namespace
 * @param string $class string containing the class to include
 * @return void
 */
